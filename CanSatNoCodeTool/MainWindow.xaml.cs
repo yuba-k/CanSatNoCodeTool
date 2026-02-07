@@ -31,7 +31,11 @@ namespace CanSatNoCodeTool
                 AppDomain.CurrentDomain.BaseDirectory,
                 "Blockly",
                 "index.html");
-            Console.WriteLine(path);
+            if (!File.Exists(path))
+            {
+                MessageBox.Show("Blockly/index.html not found.");
+                Application.Current.Shutdown();
+            }
             BlocklyView.Source = new Uri(path);
         }
 

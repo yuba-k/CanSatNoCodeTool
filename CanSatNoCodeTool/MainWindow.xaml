@@ -9,7 +9,6 @@
         Title="MainWindow" Height="450" Width="800"
        >
     <Grid>
-        <wv2:WebView2 Name="BlocklyView"
-                       Source="https://www.microsoft.com"/>
+        <wv2:WebView2 Name="BlocklyView"/>
     </Grid>
 </Window>
